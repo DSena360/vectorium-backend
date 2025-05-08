@@ -19,7 +19,7 @@ const operantData = {
 const memoryDiff = {
   before_operant_id: 'OP-004',
   after_operant_id: 'OP-005',
-  ∆e_change: 0.000,
+  delta_e: 0.000,: 0.000,
   clause_diff: { validation_frequency: '250Hz' },
   sync_origin_node: 'Validator-007',
   timestamp: new Date().toISOString(),
@@ -29,7 +29,7 @@ app.get('/q360/viewer/data', (_, res) => res.json(operantData));
 app.get('/q360/viewer/memory', (_, res) => res.json(memoryDiff));
 app.post('/q360/clause-tree/v1', (req, res) => {
   fs.writeFileSync('./operant_log.json', JSON.stringify(req.body, null, 2));
-  res.json({ status: 'accepted', ∆e: 0.000, timestamp: new Date().toISOString() });
+  res.json({ status: 'accepted', delta_e: 0.000,, timestamp: new Date().toISOString() });
 });
 
 app.listen(process.env.PORT || 3000, () => {
