@@ -11,7 +11,7 @@ const operantData = {
   operant_id: 'OP-005',
   validator: 'Validator-007',
   mutation_data: { type: 'frequency_increase', value: '250Hz' },
-  ∆e: 0.000,
+    delta_e: 0.000,: 0.000,
   capsule_sync_delta: 0.01,
   timestamp: new Date().toISOString(),
 };
